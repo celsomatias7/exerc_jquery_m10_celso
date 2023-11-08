@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+html { /*todo o conteudo que ultrapassar as margens na horizontal não deve ser exibido*/
+    overflow-x:hidden;
+}
+
+.container { /*formatando o conteúdo do container para ficar de acordo com a tela do pc do usuário*/
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: #192a56;
+    padding-top: 16px;
+    color: #fff;
+}
+
+header > .container ,
+footer > .container { /*o sinal de > indica que queremos selecionar apenas o container que é filho do header */
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+header { /*para o cabeçalho seguir a rolagem da página no topo superior */
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+.container-flex {
+    display: flex; /* para colocar o menu de navegação à esquerda da pagina*/
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+.item-central {
+    margin: 0 5%;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #119759;
+    color:#fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px; /*borda arredondada*/
+}
+
+.form-campo {
+    margin-bottom: 16px;
+}
+
+.form-campo label {
+    font-weight: bold;
+    display: block; /*para colocar o label (campo de preenchimento) em uma linha e o nome do campo acima*/
+}
+
+.form-campo input {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+form {
+    max-width: 360px;
+}
+
+form button {
+    max-width: 120px;
+}
+
+footer li {
+    list-style:none;
+    margin-left: 16px;
+}
+
+footer li img {
+    height: 32px;
+}
+
